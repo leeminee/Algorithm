@@ -14,17 +14,19 @@ public class ACM호텔_10250 {
         int frontNumber;
         int backNumber;
         for (int i = 0; i < testCase; i++) {
-            st = new StringTokenizer(br.readLine()," ");
+            st = new StringTokenizer(br.readLine(), " ");
             high = Integer.parseInt(st.nextToken());
             width = Integer.parseInt(st.nextToken());
             number = Integer.parseInt(st.nextToken());
-            frontNumber = (number%high) *100;
-
-
+            if (number % high == 0) {
+                frontNumber = high * 100;
+                backNumber = number/high;
+            } else {
+                frontNumber = (number % high) * 100;
+                backNumber = (number / high) + 1;
+            }
+            System.out.println(frontNumber + backNumber);
         }
         br.close();
-
-
-
     }
 }
