@@ -1,4 +1,4 @@
-package Level2.if문;
+package Level2.조건문;
 
 import java.util.Scanner;
 
